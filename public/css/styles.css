@@ -1,0 +1,128 @@
+html {
+  /* background-color: #fde4e4;
+  background-image: -webkit-linear-gradient(180deg, #e38383 50%, #fde4e4 50%); */
+  background: #304352; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #d7d2cc,
+    #304352
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #d7d2cc,
+    #304352
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 1000px;
+  font-family: "helvetica neue";
+}
+
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+  background-color: #304352;
+  /* background-image: -webkit-linear-gradient(360deg, #304352 25%, #fde4e4 50%); */
+  text-align: center;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input:checked + p {
+  text-decoration: line-through;
+  text-decoration-color: #304352;
+}
+
+input[type="checkbox"] {
+  transform: scale(1);
+  margin: 20px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:hover {
+  transform: scale(1.2);
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+form.item {
+  text-align: center;
+  margin-left: 20px;
+}
+
+button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #304352;
+  color: #fff;
+  font-size: 30px;
+  /* padding-bottom: px; */
+  border-width: 0;
+  cursor: pointer;
+}
+
+button:hover {
+  animation: rotation 0.3s infinite linear;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #304352;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+footer {
+  color: #edf7ff;
+  /* color: rgba(0, 0, 0, 0.5); */
+  text-align: center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}

@@ -1,0 +1,39 @@
+<%- include("header") -%>
+
+<div class="box" id="heading">
+  <h1><%= listTitle %></h1>
+</div>
+
+<div class="box">
+  <% newListItems.forEach(item => { %>
+  <!-- make the post request for deleting checked item -->
+  <!-- but the route will be seperate  -->
+  <form action="/delete" method="post">
+    <div class="item">
+      <!-- if checkbox == true it'll be submitted by using onChange attribute to make that post request to our delete route -->
+      <!-- add value attribute, will check which id was actually checked off -->
+      <input
+        type="checkbox"
+        name="checkbox"
+        value="<%= item._id %>"
+        onChange="this.form.submit()"
+      />
+      <input type="hidden" name="listName" value="<%= listTitle %>"></input>
+      <p><%= item.name %></p>
+    </div>
+  </form>
+
+  <% }); %>
+
+  <form class="item" action="/" method="post">
+    <input
+      type="text"
+      name="newItem"
+      placeholder="New List"
+      autocomplete="off"
+    />
+    <button type="submit" name="list" value="<%= listTitle %>">+</button>
+  </form>
+</div>
+
+<%- include("footer") -%>z
